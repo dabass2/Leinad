@@ -1,4 +1,4 @@
-# beta
+# Leinad.pw Website Code
 
 ## Project setup
 ```
