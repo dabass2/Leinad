@@ -121,7 +121,7 @@ export default {
         { img: 'https://leinad.pw/images/bot.jpg', color: '#BDD2A6', title:
           'Discord Bot', text: "I made a discord bot, however it's mostly\
           just for learning purposes and having fun. It's not anything special\
-          yet but maybe one day I'll make it something greater.", link: "https://github.com/dabass2/tfw-bot"},
+          yet but maybe one day I'll make it something greater.", link: "https://github.com/dabass2/Discord-Bot"},
         { img: 'https://leinad.pw/images/boxes.jpg', color: '#B09398', title:
           'Assorted Work', text: "This is where anything\
           I've done that doesn't fit anywhere else goes. School work and other\
