@@ -29,19 +29,19 @@
         },
         {
           text: 'Vizu Page',
-          href: '/vizu'
+          href: '/assort/vizu'
         },
         {
           text: 'LoBN',
-          href: '/vizu/lobn'
+          href: '/assort/vizu/lobn'
         },
         {
           text: 'Bubble Sort',
-          href: 'vizu/bubble'
+          href: '/assort/vizu/bubble'
         },
         {
           text: '3D',
-          href: '/vizu/3D'
+          href: '/assort/vizu/3D'
         }
       ],
       threeD: [
@@ -51,17 +51,17 @@
         },
         {
           text: 'Data',
-          href: '/stuff'
+          href: '/assort/stuff'
         },
       ],
       dnd: [
         {
           text: 'File Page',
-          href: '/files'
+          href: '/assort/files'
         },
         {
           text: 'DND Page',
-          href: '/dnd'
+          href: '/assort/dnd'
         }
       ],
       cgi: [
@@ -71,7 +71,7 @@
         },
         {
           text: 'CGI-bin',
-          href: '/cgi-bin'
+          href: '/assort/cgi-bin'
         }
       ]
     })
