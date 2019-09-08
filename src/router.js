@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Work from "./views/Work.vue";
+import Files from "./views/Files.vue"
 import NotFound from "./views/NotFound.vue";
 
 Vue.use(Router);
@@ -31,6 +32,11 @@ export default new Router({
       path: "/404",
       name: "404",
       component: NotFound
+    },
+    {
+      path: "/files",
+      name: "files",
+      component: Files
     },
     { path: "*", name: "404", component: NotFound }
   ]

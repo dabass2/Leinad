@@ -40,8 +40,7 @@
         <v-list-tile
           v-for="item in items"
           :key="item.title"
-          :to="items.href"
-          v-on:click="(item.href === 'files') ? pizza() : goTo(item.href)"
+          router-link :to="item.link"
         >
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -74,16 +73,11 @@
       return {
         drawer: null,
         items: [
-          { title: 'Home', icon: 'fas fa-home', href: "home" },
+          { title: 'Home', icon: 'fas fa-home', link: "/" },
           // { title: 'About', icon: 'fas fa-user', href: "about" },
-          { title: 'Work', icon: 'fas fa-folder', href: "work" },
-          { title: 'Files', icon: 'fas fa-th-large', href: "files"}
+          { title: 'Work', icon: 'fas fa-folder', link: "/work" },
+          { title: 'Files', icon: 'fas fa-th-large', link: "/files"}
         ]
-      }
-    },
-    methods: {
-      pizza() {
-        window.open("https://leinad.pw/assort");
       }
     }
   }
