@@ -49,7 +49,7 @@
 
               <v-card-title primary-title>
                 <div>
-                  <h3 class="headline mb-0">Work</h3>
+                  <h3 class="headline mb-0">Vizulations</h3>
                   <div> <span>Here are visualization of various topics that I have made for fun. I'm no data scientist, but these are fun to make. I'll most likely make more in the future to learn new things and refine topics.</span> </div>
                 </div>
               </v-card-title>
@@ -125,7 +125,7 @@ export default {
         { img: 'https://leinad.pw/images/boxes.jpg', color: '#B09398', title:
           'Assorted Work', text: "This is where anything\
           I've done that doesn't fit anywhere else goes. School work and other\
-          projects have their home here.", link: "https://leinad.pw/assort/"}
+          projects have their home here.", link: "https://leinad.pw/files/"}
       ]
     }
   }
