@@ -8,7 +8,7 @@
             <v-btn flat icon dark href="https://github.com/dabass2">
               <v-icon>fab fa-github</v-icon>
             </v-btn> Github
-            <v-btn flat icon dark href="https://leinad.pw/assort">
+            <v-btn flat icon dark href="https://leinad.pw/files">
               <v-icon>fas fa-th-large</v-icon>
             </v-btn> Files
           </div>
@@ -84,7 +84,7 @@
 
           <v-flex xs12>
             <v-card>
-              <a href="https://leinad.pw/assort/">
+              <a href="files">
                 <v-img
                   src="https://leinad.pw/images/boxes.jpg"
                   aspect-ratio="2.69"
@@ -99,7 +99,7 @@
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" href="https://leinad.pw/assort/">Visit</v-btn>
+                <v-btn flat color="red" href="https://leinad.pw/files">Visit</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>

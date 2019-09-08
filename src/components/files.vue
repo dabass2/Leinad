@@ -57,7 +57,7 @@
       dnd: [
         {
           text: 'File Page',
-          href: '/assort/files'
+          href: '/files'
         },
         {
           text: 'DND Page',
