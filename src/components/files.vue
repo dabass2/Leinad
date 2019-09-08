@@ -51,7 +51,7 @@
         },
         {
           text: 'Data',
-          href: '/assort/stuff'
+          href: '/assort/stuff/planetData.json'
         },
       ],
       dnd: [
@@ -71,7 +71,7 @@
         },
         {
           text: 'CGI-bin',
-          href: '/assort/cgi-bin'
+          href: '/assort/cgi-bin/main.py'
         }
       ]
     })
