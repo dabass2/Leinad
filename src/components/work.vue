@@ -62,7 +62,7 @@
 
           <v-flex xs12>
             <v-card>
-              <a href="https://github.com/dabass2/tfw-bot">
+              <a href="https://github.com/dabass2/Discord-Bot">
                 <v-img
                   src="https://leinad.pw/images/bot.jpg"
                   aspect-ratio="2.69"
@@ -77,7 +77,7 @@
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" href="https://github.com/dabass2/tfw-bot">Visit</v-btn>
+                <v-btn flat color="red" href="https://github.com/dabass2/Discord-Bot">Visit</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
