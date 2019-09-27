@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="test">
-      <v-parallax src="https://leinad.pw/images/HAFBE92.jpg">  <!-- Web links because I don't have them local when testing and I'm too lazy to change..-->
+      <v-parallax src="https://leinad.pw/images/landingBG.jpg">  <!-- Web links because I don't have them local when testing and I'm too lazy to change..-->
       <v-layout
         align-center
         column

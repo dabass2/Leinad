@@ -2,7 +2,7 @@
 <!-- <div> -->
   <div>
     <!-- Parallax Start -->
-      <v-parallax height="300" src="https://leinad.pw/images/seaside.jpg">
+      <v-parallax height="300" src="https://leinad.pw/images/workBG.jpg">
           <h1 class="display-2 font-weight-thin mb-3, text-xs-center">Project | Labs | Assorted Programs</h1>
           <div class="text-xs-center">
             <v-btn flat icon dark href="https://github.com/dabass2">
