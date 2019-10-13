@@ -5,10 +5,10 @@
       <v-parallax height="300" src="https://leinad.pw/images/workBG.jpg">
           <h1 class="display-2 font-weight-thin mb-3, text-xs-center">Project | Labs | Assorted Programs</h1>
           <div class="text-xs-center">
-            <v-btn flat icon dark href="https://github.com/dabass2">
+            <v-btn text icon dark href="https://github.com/dabass2">
               <v-icon>fab fa-github</v-icon>
             </v-btn> Github
-            <v-btn flat icon dark href="https://leinad.pw/files">
+            <v-btn text icon dark href="https://leinad.pw/files">
               <v-icon>fas fa-th-large</v-icon>
             </v-btn> Files
           </div>
@@ -55,7 +55,7 @@
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" href="https://leinad.pw/assort/vizu">Visit</v-btn>
+                <v-btn text color="red" href="https://leinad.pw/assort/vizu">Visit</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -77,7 +77,7 @@
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" href="https://github.com/dabass2/Discord-Bot">Visit</v-btn>
+                <v-btn text color="red" href="https://github.com/dabass2/Discord-Bot">Visit</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -99,7 +99,7 @@
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" href="https://leinad.pw/files">Visit</v-btn>
+                <v-btn text color="red" href="https://leinad.pw/files">Visit</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>

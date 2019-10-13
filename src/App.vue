@@ -3,7 +3,7 @@
     <div class="row header">
       <v-toolbar >
         <v-btn
-         flat
+         text
          icon
          @click.stop="drawer = !drawer"
          >
@@ -12,8 +12,8 @@
         <v-toolbar-title>Leinad</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn flat icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon>fab fa-linkedin</v-icon></v-btn>
-          <v-btn flat icon href="https://github.com/dabass2"><v-icon>fab fa-github</v-icon></v-btn>
+          <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon>fab fa-linkedin</v-icon></v-btn>
+          <v-btn text icon href="https://github.com/dabass2"><v-icon>fab fa-github</v-icon></v-btn>
         </v-toolbar-items>
       </v-toolbar>
     </div>
@@ -23,33 +23,33 @@
       temporary
     >
       <v-list class="pa-1">
-        <v-list-tile avatar>
-          <v-list-tile-avatar>
+        <v-list-item>
+          <v-list-item-avatar>
             <img src="https://leinad.pw/images/logo.png">
-          </v-list-tile-avatar>
+          </v-list-item-avatar>
 
-          <v-list-tile-content>
-            <v-list-tile-title>Leinad</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          <v-list-item-content>
+            <v-list-item-title>Leinad</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
 
       <v-list class="pt-0" dense>
         <v-divider></v-divider>
 
-        <v-list-tile
+        <v-list-item
           v-for="item in items"
           :key="item.title"
           router-link :to="item.link"
         >
-          <v-list-tile-action>
+          <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
+          </v-list-item-action>
 
-          <v-list-tile-content>
-            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-content>
@@ -58,8 +58,8 @@
       </transition>
     </v-content>
     <v-footer dark app insert>
-      <v-btn flat icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon size="24px">fab fa-linkedin</v-icon></v-btn>
-      <v-btn flat icon href="https://github.com/dabass2"><v-icon size="24px">fab fa-github</v-icon></v-btn>
+      <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon size="24px">fab fa-linkedin</v-icon></v-btn>
+      <v-btn text icon href="https://github.com/dabass2"><v-icon size="24px">fab fa-github</v-icon></v-btn>
       <v-spacer></v-spacer>
       <div id="copyright">&copy;2019 — <strong>Daniel Bass</strong></div>
     </v-footer>

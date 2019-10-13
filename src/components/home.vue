@@ -27,12 +27,12 @@
               <v-card-title primary-title>
                 <div>
                   <h3 class="headline mb-0">Work</h3>
-                  <div> <span>View my various projects and/or labs that I have completed. Many of them are made for learning experiences.</span> </div>
+                  <div>View my various projects and/or labs that I have completed. Many of them are made for learning experiences.</div>
                 </div>
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" to="/work">Visit</v-btn>
+                <v-btn text color="red" to="/work">Visit</v-btn>
               </v-card-actions>
             </v-card>
         </v-layout>
@@ -55,7 +55,7 @@
                 </div>
               </v-card-title>
               <v-card-actions>
-                <v-btn flat color="red" to="/files">Visit</v-btn>
+                <v-btn text color="red" to="/files">Visit</v-btn>
               </v-card-actions>
             </v-card>
         </v-layout>
