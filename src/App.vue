@@ -25,7 +25,7 @@
       <v-list class="pa-1">
         <v-list-tile avatar>
           <v-list-tile-avatar>
-            <img src="https://leinad.pw/images/logo.png">
+            <img :src="require('@/assets/logo.png')">
           </v-list-tile-avatar>
 
           <v-list-tile-content>

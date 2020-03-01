@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id="test">
-      <v-parallax src="https://leinad.pw/images/landingBG.jpg">  <!-- Web links because I don't have them local when testing and I'm too lazy to change..-->
+    <div id="bgDiv">
+      <v-parallax :src="require('@/assets/night.jpg')">  <!-- Web links because I don't have them local when testing and I'm too lazy to change..-->
       <v-layout
         align-center
         column
@@ -17,9 +17,9 @@
       <div class="cards">
         <v-layout>
             <v-card>
-              <a href="work">
+              <a href="/work">
                 <v-img
-                  src="https://leinad.pw/images/mac.jpg"
+                  :src="require('@/assets/code.jpg')"
                   aspect-ratio="2.75"
                 ></v-img>
               </a>
@@ -41,9 +41,9 @@
       <div class="cards">
         <v-layout>
             <v-card>
-              <a href="files">
+              <a href="/files">
                 <v-img
-                  src="https://leinad.pw/images/codeWall.jpg"
+                  :src="require('@/assets/git.jpg')"
                   aspect-ratio="2.75"
                 ></v-img>
               </a>

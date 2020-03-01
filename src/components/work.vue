@@ -2,18 +2,19 @@
 <!-- <div> -->
   <div>
     <!-- Parallax Start -->
-      <v-parallax height="300" src="https://leinad.pw/images/workBG.jpg">
+      <v-parallax height="300" :src="require('@/assets/workBG.jpg')">
           <h1 class="display-2 font-weight-thin mb-3, text-xs-center">Project | Labs | Assorted Programs</h1>
           <div class="text-xs-center">
             <v-btn flat icon dark href="https://github.com/dabass2">
               <v-icon>fab fa-github</v-icon>
             </v-btn> Github
-            <v-btn flat icon dark href="https://leinad.pw/files">
+            <v-btn flat icon dark href="/files">
               <v-icon>fas fa-th-large</v-icon>
             </v-btn> Files
           </div>
       </v-parallax>
       <!-- Parallax End -->
+
       <!-- Timeline Start -->
       <div class="container hidden-sm-and-down">
         <div class="timeline">
@@ -24,7 +25,10 @@
               hide-dot
             >
             <template v-slot:opposite>
-              <v-img :src="`${item.img}`" height="200px"></v-img>
+              <!-- <a :href="require(`${item.link}`)"> -->
+              <a :href="`${item.link}`">
+                <v-img :src="require(`@/assets/${item.img}`)" height="200px"></v-img>
+              </a>
             </template>
               <div class="timeline-text">
                 <h2 :class="`headline font-weight-light mb-3 ${item.color}--text`">{{item.title}}</h2>
@@ -36,13 +40,15 @@
         </div>
       </div>
       <!-- Timeline End -->
+
+      <!-- View for below desktop size start -->
       <v-container grid-list-md>
         <v-layout row wrap align-center class="hidden-md-and-up">
           <v-flex xs12>
             <v-card>
               <a href="https://leinad.pw/assort/vizu">
                 <v-img
-                  src="https://leinad.pw/images/sort.jpg"
+                  :src="require('@/assets/sort.jpg')"
                   aspect-ratio="2.69"
                 ></v-img>
               </a>
@@ -64,7 +70,7 @@
             <v-card>
               <a href="https://github.com/dabass2/Discord-Bot">
                 <v-img
-                  src="https://leinad.pw/images/bot.jpg"
+                  :src="require('@/assets/bot.jpg')"
                   aspect-ratio="2.69"
                 ></v-img>
               </a>
@@ -84,9 +90,9 @@
 
           <v-flex xs12>
             <v-card>
-              <a href="files">
+              <a href="/files">
                 <v-img
-                  src="https://leinad.pw/images/boxes.jpg"
+                  :src="require('@/assets/boxes.jpg')"
                   aspect-ratio="2.69"
                 ></v-img>
               </a>
@@ -99,12 +105,13 @@
               </v-card-title>
 
               <v-card-actions>
-                <v-btn flat color="red" href="https://leinad.pw/files">Visit</v-btn>
+                <v-btn flat color="red" to="/files">Visit</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
         </v-layout>
       </v-container>
+      <!-- View for below desktop size end -->
   </div>
 </template>
 
@@ -113,19 +120,19 @@ export default {
   data () {
     return {
       timeline: [
-        { img: 'https://leinad.pw/images/sort.jpg', color: '#899E8B', title:
+        { img: 'sort.jpg', color: '#899E8B', title:
           'Visualizations', text: "Here are visualization of various \
           topics that I have made for fun. I'm no data scientist, but these are\
           fun to make. I'll most likely make more in the future to learn new \
           things and refine topics.", link: "https://leinad.pw/assort/vizu" },
-        { img: 'https://leinad.pw/images/bot.jpg', color: '#BDD2A6', title:
+        { img: 'bot.jpg', color: '#BDD2A6', title:
           'Discord Bot', text: "I made a discord bot, however it's mostly\
           just for learning purposes and having fun. It's not anything special\
           yet but maybe one day I'll make it something greater.", link: "https://github.com/dabass2/Discord-Bot"},
-        { img: 'https://leinad.pw/images/boxes.jpg', color: '#B09398', title:
+        { img: 'boxes.jpg', color: '#B09398', title:
           'Assorted Work', text: "This is where anything\
           I've done that doesn't fit anywhere else goes. School work and other\
-          projects have their home here.", link: "https://leinad.pw/files/"}
+          projects have their home here.", link: "/files"}
       ]
     }
   }
