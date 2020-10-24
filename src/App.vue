@@ -17,6 +17,7 @@
         </v-toolbar-items>
       </v-toolbar>
     </div>
+
     <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -52,12 +53,14 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+
     <v-main>
       <transition name="page" mode="out-in">
-                <router-view/>
+        <router-view/>
       </transition>
     </v-main>
-    <v-footer dark app insert>
+
+    <v-footer dark>
       <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon size="24px">fab fa-linkedin</v-icon></v-btn>
       <v-btn text icon href="https://github.com/dabass2"><v-icon size="24px">fab fa-github</v-icon></v-btn>
       <v-spacer></v-spacer>
@@ -74,7 +77,6 @@
         drawer: null,
         items: [
           { title: 'Home', icon: 'fas fa-home', link: "/" },
-          // { title: 'About', icon: 'fas fa-user', href: "about" },
           { title: 'Work', icon: 'fas fa-folder', link: "/work" },
           { title: 'Files', icon: 'fas fa-th-large', link: "/files"}
         ]

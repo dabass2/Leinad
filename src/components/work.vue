@@ -28,7 +28,7 @@
             <template v-slot:opposite>
               <a :href="`${item.link}`"><v-img :src="require(`@/assets/work/${item.img}`)" aspect-ratio="3.69"></v-img></a>
             </template>
-            <v-card flat>
+            <v-card flat color="transparent">
               <v-card-title class="headline font-weight-light">{{item.title}}</v-card-title>
               <v-divider></v-divider>
               <v-card-text class="white text--primary">{{item.text}}</v-card-text>
@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <v-container grid-list-md class="hidden-md-and-up">
+    <v-container class="hidden-md-and-up">
       <v-row>
         <v-col>
           <v-card
@@ -50,7 +50,9 @@
             flat
             class="my-4"
           >
-            <v-img :src="`${item.img}`" aspect-ratio="3.69"></v-img>
+            <a :href="`${item.link}`">
+              <v-img :src="require(`@/assets/work/${item.img}`)" aspect-ratio="3.69"></v-img>
+            </a>
             <v-card-title>{{item.title}}</v-card-title>
             <v-card-text>{{item.text}}</v-card-text>
             <v-card-actions>
@@ -89,17 +91,17 @@ export default {
           of the api in use.", link: "http://leinad.pw:9000/rmeme"
         },
         {
-          img: 'watchpls2.jpg', color: '#627264', title: 'WatchPls', text: 'WatchPls was the result of \
-          rabb.it shutting down. Add the chrome or edge extension to your browser, \
-          and with a click of a button you can create a room where you and your friends \
-          can all watch whatever you share. More features coming soon (maybe).',
-          link: "https://watchpls.me/"
+          img: 'watchpls2.jpg', color: '#627264', title: 'WatchPls', text: 'WatchPls\
+          was the result of rabb.it shutting down. Add the chrome or edge extension to\
+          your browser, and with a click of a button you can create a room where you\
+          and your friends can all watch whatever you share. More features coming soon\
+          (maybe).', link: "https://watchpls.me/"
         },
         { img: 'sort.jpg', color: '#AD9BAA', title:
           'Assorted Work', text: "This is where anything\
           I've done that doesn't fit anywhere else goes. It's primarily random\
           files just thrown about. Check it out, maybe you'll find something fun.",
-          link: "files/"}
+          link: "files"}
       ]
     }
   }

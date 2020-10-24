@@ -2,7 +2,7 @@
   <v-row justify="center">
     <v-col align="center" cols="5">
       <v-card>
-        <v-card-title class="justify-center text-h1">
+        <v-card-title class="justify-center text-h2">
           Files
         </v-card-title>
         <v-card-subtitle class="justify-center text-subtitle-1">
@@ -26,15 +26,11 @@
     data: () => ({
       vizu: [
         {
-          text: 'File Page',
-          href: '/assort'
-        },
-        {
           text: 'Vizu Page',
           href: '/assort/vizu'
         },
         {
-          text: 'LoBN',
+          text: 'Weak Law of Big Numbers',
           href: '/assort/vizu/lobn'
         },
         {
@@ -42,14 +38,14 @@
           href: '/assort/vizu/bubble'
         },
         {
-          text: '3D',
+          text: 'Playground for 3D Tests',
           href: '/assort/vizu/3D'
         }
       ],
       threeD: [
         {
-          text: 'File Page',
-          href: '/assort'
+          text: 'Random Stuff',
+          href: '/assort/stuff'
         },
         {
           text: 'Data',
@@ -58,31 +54,19 @@
       ],
       dnd: [
         {
-          text: 'File Page',
-          href: '/assort'
-        },
-        {
           text: 'DND Page',
           href: '/assort/dnd'
         }
       ],
       cgi: [
         {
-          text: 'File Page',
-          href: '/assort'
-        },
-        {
-          text: 'CGI-bin',
+          text: 'Old CGI Python Scripts',
           href: '/assort/cgi-bin/main.py'
         }
       ],
       noah: [
         {
-          text: 'Base Page',
-          href: '/'
-        },
-        {
-          text: 'Noah',
+          text: 'Test Website for a Friend',
           href: '/noah'
         }
       ]
