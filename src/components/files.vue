@@ -10,11 +10,12 @@
         </v-card-subtitle>
         <v-divider width="85%"></v-divider>
         <div class="links">
-          <v-breadcrumbs :items="vizu" divider=">"/>
-          <v-breadcrumbs :items="threeD" divider=">"/>
-          <v-breadcrumbs :items="dnd" divider=">"/>
-          <v-breadcrumbs :items="cgi" divider=">"/>
-          <v-breadcrumbs :items="noah" divider=">"/>
+          <v-breadcrumbs :items="pages" divider="|"/>
+          <v-breadcrumbs :items="vizu" divider="|"/>
+          <v-breadcrumbs :items="threeD" divider="|"/>
+          <v-breadcrumbs :items="dnd" divider="|"/>
+          <v-breadcrumbs :items="cgi" divider="|"/>
+          <v-breadcrumbs :items="noah" divider="|"/>
         </div>
       </v-card>
     </v-col>
@@ -24,6 +25,16 @@
 <script>
   export default {
     data: () => ({
+      pages: [
+        {
+          text: 'Home Page',
+          href: '/'
+        },
+        {
+          text: 'Work Page',
+          href: '/work'
+        }
+      ],
       vizu: [
         {
           text: 'Vizu Page',

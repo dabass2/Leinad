@@ -9,7 +9,7 @@
          >
           <v-icon>fas fa-bars</v-icon>
         </v-btn>
-        <v-toolbar-title>Leinad</v-toolbar-title>
+        <v-toolbar-title class="text-h6">Leinad</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon>fab fa-linkedin</v-icon></v-btn>
@@ -24,24 +24,25 @@
       temporary
     >
       <v-list class="pa-1">
-        <v-list-tile avatar>
-          <v-list-tile-avatar>
+        <v-list-item>
+          <v-list-item-avatar>
             <img :src="require('@/assets/logo.png')">
-          </v-list-tile-avatar>
+          </v-list-item-avatar>
 
           <v-list-item-content>
-            <v-list-item-title>Leinad</v-list-item-title>
+            <v-list-item-title class="text-body-1">Leinad</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
 
-      <v-list class="pt-0" dense>
-        <v-divider></v-divider>
+      <v-divider></v-divider>
 
+      <v-list class="pt-0" dense>
         <v-list-item
           v-for="item in items"
           :key="item.title"
-          router-link :to="item.link"
+          router-link
+          :to="item.link"
         >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
