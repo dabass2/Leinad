@@ -1,117 +1,67 @@
 <template>
-<!-- <div> -->
   <div>
-    <!-- Parallax Start -->
-      <v-parallax height="300" :src="require('@/assets/workBG.jpg')">
-          <h1 class="display-2 font-weight-thin mb-3, text-xs-center">Project | Labs | Assorted Programs</h1>
+    <v-row no-gutters>
+      <v-col align="center">
+        <v-parallax height="300" :src="require('@/assets/work/workBG.jpg')">
+          <h1 class="display-2 font-weight-thin">Work | Projects</h1>
+          <h4 class="subheading my-1">Various Projects and Fun Experiments</h4>
           <div class="text-xs-center">
-            <v-btn flat icon dark href="https://github.com/dabass2">
+            <v-btn text icon dark href="https://github.com/dabass2">
               <v-icon>fab fa-github</v-icon>
-            </v-btn> Github
-            <v-btn flat icon dark href="/files">
-              <v-icon>fas fa-th-large</v-icon>
-            </v-btn> Files
+            </v-btn>
+            <v-btn text icon dark href="https://www.linkedin.com/in/daniel-bass-16204617b/">
+              <v-icon>fab fa-linkedin</v-icon>
+            </v-btn> 
           </div>
-      </v-parallax>
-      <!-- Parallax End -->
+        </v-parallax>
+      </v-col>
+    </v-row>
 
-      <!-- Timeline Start -->
-      <div class="container hidden-sm-and-down">
-        <div class="timeline">
-          <v-timeline align-top>
-            <v-timeline-item
-              v-for="(item, i) in timeline"
-              :key="i"
-              hide-dot
-            >
+    <div class="container hidden-sm-and-down">
+      <div class="timeline">
+        <v-timeline align-top>
+          <v-timeline-item
+            v-for="(item, i) in timeline"
+            :key="i"
+            hide-dot
+          >
             <template v-slot:opposite>
-              <!-- <a :href="require(`${item.link}`)"> -->
-              <a :href="`${item.link}`">
-                <v-img :src="require(`@/assets/${item.img}`)" height="200px"></v-img>
-              </a>
+              <a :href="`${item.link}`"><v-img :src="require(`@/assets/work/${item.img}`)" aspect-ratio="3.69"></v-img></a>
             </template>
-              <div class="timeline-text">
-                <h2 :class="`headline font-weight-light mb-3 ${item.color}--text`">{{item.title}}</h2>
-                <p>{{item.text}}</p>
+            <v-card flat color="transparent">
+              <v-card-title class="headline font-weight-light">{{item.title}}</v-card-title>
+              <v-divider></v-divider>
+              <v-card-text class="white text--primary">{{item.text}}</v-card-text>
+              <v-card-actions>
                 <v-btn dark :color="item.color" :href="`${item.link}`">Visit</v-btn>
-              </div>
-            </v-timeline-item>
-          </v-timeline>
-        </div>
+              </v-card-actions>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
       </div>
-      <!-- Timeline End -->
+    </div>
 
-      <!-- View for below desktop size start -->
-      <v-container grid-list-md>
-        <v-layout row wrap align-center class="hidden-md-and-up">
-          <v-flex xs12>
-            <v-card>
-              <a href="https://leinad.pw/assort/vizu">
-                <v-img
-                  :src="require('@/assets/sort.jpg')"
-                  aspect-ratio="2.69"
-                ></v-img>
-              </a>
-
-              <v-card-title primary-title>
-                <div>
-                  <h3 class="headline mb-0">Vizulations</h3>
-                  <div> <span>Here are visualization of various topics that I have made for fun. I'm no data scientist, but these are fun to make. I'll most likely make more in the future to learn new things and refine topics.</span> </div>
-                </div>
-              </v-card-title>
-
-              <v-card-actions>
-                <v-btn flat color="red" href="https://leinad.pw/assort/vizu">Visit</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-
-          <v-flex xs12>
-            <v-card>
-              <a href="https://github.com/dabass2/Discord-Bot">
-                <v-img
-                  :src="require('@/assets/bot.jpg')"
-                  aspect-ratio="2.69"
-                ></v-img>
-              </a>
-
-              <v-card-title primary-title>
-                <div>
-                  <h3 class="headline mb-0">Discord Bot</h3>
-                  <div> <span>I made a discord bot, however it's mostly just for learning purposes and having fun. It's not anything special yet but maybe one day I'll make it something greater.</span> </div>
-                </div>
-              </v-card-title>
-
-              <v-card-actions>
-                <v-btn flat color="red" href="https://github.com/dabass2/Discord-Bot">Visit</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-
-          <v-flex xs12>
-            <v-card>
-              <a href="/files">
-                <v-img
-                  :src="require('@/assets/boxes.jpg')"
-                  aspect-ratio="2.69"
-                ></v-img>
-              </a>
-
-              <v-card-title primary-title>
-                <div>
-                  <h3 class="headline mb-0">Assorted Work</h3>
-                  <div> <span>This is where anything I've done that doesn't fit anywhere else goes. School work and other projects have their home here.</span> </div>
-                </div>
-              </v-card-title>
-
-              <v-card-actions>
-                <v-btn flat color="red" to="/files">Visit</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-      <!-- View for below desktop size end -->
+    <v-container class="hidden-md-and-up">
+      <v-row>
+        <v-col>
+          <v-card
+            v-for="(item, i) in timeline"
+            :key="i"
+            flat
+            class="my-4"
+          >
+            <a :href="`${item.link}`">
+              <v-img :src="require(`@/assets/work/${item.img}`)" aspect-ratio="3.69"></v-img>
+            </a>
+            <v-card-title>{{item.title}}</v-card-title>
+            <v-card-text>{{item.text}}</v-card-text>
+            <v-card-actions>
+              <v-btn dark :color="item.color" :href="`${item.link}`">Visit</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -120,19 +70,38 @@ export default {
   data () {
     return {
       timeline: [
-        { img: 'sort.jpg', color: '#899E8B', title:
-          'Visualizations', text: "Here are visualization of various \
-          topics that I have made for fun. I'm no data scientist, but these are\
-          fun to make. I'll most likely make more in the future to learn new \
-          things and refine topics.", link: "https://leinad.pw/assort/vizu" },
-        { img: 'bot.jpg', color: '#BDD2A6', title:
-          'Discord Bot', text: "I made a discord bot, however it's mostly\
-          just for learning purposes and having fun. It's not anything special\
-          yet but maybe one day I'll make it something greater.", link: "https://github.com/dabass2/Discord-Bot"},
-        { img: 'boxes.jpg', color: '#B09398', title:
+        { img: 'aniGuess.jpg', color: '#C5E7E2', title:
+          'Anime Guess', text: "Like Anime? Like Anime but don't want to admit it?\
+          Test how well you know your favorite anime here. Put in your AniList\
+          or MyAnimeList account name, and play a game where you've gotta guess\
+          what show the character is from before time runs out.", link: "anime"
+        },
+        { img: 'bot.jpg', color: '#A1CDA8', title:
+          'Discord Bot', text: "A discord bot I made called 'tfw'. Originally\
+          it was meant to send a random 'The Feeling (or face) When' image, but\
+          instead morphed into a playground where I learnt javascript. Use it to\
+          get a random meme, or even keep track of currently airing anime you're\
+          watching.", link: "https://github.com/dabass2/Discord-Bot"
+        },
+        { 
+          img: 'rmeme.jpg', color: '#B5DFCA',
+          title: 'Random Meme Api', text: "Random Meme (rmeme) is an API that \
+          will return a random meme to be used in whatever way you want to. Full \
+          documentation coming soon (probably). See my discord bot for an example\
+          of the api in use.", link: "http://leinad.pw:9000/rmeme"
+        },
+        {
+          img: 'watchpls2.jpg', color: '#627264', title: 'WatchPls', text: 'WatchPls\
+          was the result of rabb.it shutting down. Add the chrome or edge extension to\
+          your browser, and with a click of a button you can create a room where you\
+          and your friends can all watch whatever you share. More features coming soon\
+          (maybe).', link: "https://watchpls.me/"
+        },
+        { img: 'sort.jpg', color: '#AD9BAA', title:
           'Assorted Work', text: "This is where anything\
-          I've done that doesn't fit anywhere else goes. School work and other\
-          projects have their home here.", link: "/files"}
+          I've done that doesn't fit anywhere else goes. It's primarily random\
+          files just thrown about. Check it out, maybe you'll find something fun.",
+          link: "files"}
       ]
     }
   }
