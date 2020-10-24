@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <div class="row header">
-      <v-toolbar >
+      <v-toolbar class="ps-4">
         <v-btn
          text
          icon
@@ -52,16 +52,16 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-content>
+    <v-main>
       <transition name="page" mode="out-in">
                 <router-view/>
       </transition>
-    </v-content>
+    </v-main>
     <v-footer dark app insert>
       <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon size="24px">fab fa-linkedin</v-icon></v-btn>
       <v-btn text icon href="https://github.com/dabass2"><v-icon size="24px">fab fa-github</v-icon></v-btn>
       <v-spacer></v-spacer>
-      <div id="copyright">&copy;2019 — <strong>Daniel Bass</strong></div>
+      <div id="copyright">&copy;{{(new Date()).getFullYear()}} — <strong>Daniel Bass</strong></div>
     </v-footer>
   </v-app>
 </template>

@@ -1,20 +1,24 @@
 <template>
-  <v-container fill-height grid-list-md text-xs-center>
-    <v-layout align-center justify-center column>
-      <div class="text-xl-center display-4">
-        Files
-      </div>
-      <div class="text-xs-center title">
-        Overview of assorted files present on the site.
-      </div>
-      <div class="links flex-grow-1">
-        <v-breadcrumbs :items="vizu" divider=">"/>
-        <v-breadcrumbs :items="threeD" divider=">"/>
-        <v-breadcrumbs :items="dnd" divider=">"/>
-        <v-breadcrumbs :items="cgi" divider=">"/>
-      </div>
-    </v-layout>
-  </v-container>
+  <v-row justify="center">
+    <v-col align="center" cols="5">
+      <v-card>
+        <v-card-title class="justify-center text-h1">
+          Files
+        </v-card-title>
+        <v-card-subtitle class="justify-center text-subtitle-1">
+          Overview of assorted files present on the site.
+        </v-card-subtitle>
+        <v-divider width="85%"></v-divider>
+        <div class="links">
+          <v-breadcrumbs :items="vizu" divider=">"/>
+          <v-breadcrumbs :items="threeD" divider=">"/>
+          <v-breadcrumbs :items="dnd" divider=">"/>
+          <v-breadcrumbs :items="cgi" divider=">"/>
+          <v-breadcrumbs :items="noah" divider=">"/>
+        </div>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -23,7 +27,7 @@
       vizu: [
         {
           text: 'File Page',
-          href: '/files'
+          href: '/assort'
         },
         {
           text: 'Vizu Page',
@@ -45,7 +49,7 @@
       threeD: [
         {
           text: 'File Page',
-          href: '/files'
+          href: '/assort'
         },
         {
           text: 'Data',
@@ -55,7 +59,7 @@
       dnd: [
         {
           text: 'File Page',
-          href: '/files'
+          href: '/assort'
         },
         {
           text: 'DND Page',
@@ -65,11 +69,21 @@
       cgi: [
         {
           text: 'File Page',
-          href: '/files'
+          href: '/assort'
         },
         {
           text: 'CGI-bin',
           href: '/assort/cgi-bin/main.py'
+        }
+      ],
+      noah: [
+        {
+          text: 'Base Page',
+          href: '/'
+        },
+        {
+          text: 'Noah',
+          href: '/noah'
         }
       ]
     })
