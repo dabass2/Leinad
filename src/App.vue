@@ -24,10 +24,10 @@
       temporary
     >
       <v-list class="pa-1">
-        <v-list-item>
-          <v-list-item-avatar>
-            <img src="https://leinad.pw/images/logo.png">
-          </v-list-item-avatar>
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img :src="require('@/assets/logo.png')">
+          </v-list-tile-avatar>
 
           <v-list-item-content>
             <v-list-item-title>Leinad</v-list-item-title>
