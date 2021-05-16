@@ -1,23 +1,13 @@
 import Vue from "vue";
-import vuetify from './plugins/vuetify'
 import App from "./App.vue";
-import router from "./router.js";
 import "./registerServiceWorker";
+import router from "./router";
+import vuetify from "./plugins/vuetify";
 
 Vue.config.productionTip = false;
 
 new Vue({
-  vuetify,
   router,
-  render: h => h(App)
-}).$mount('#app')
-
-Vue.mixin({
-  methods: {
-    goTo (pageName) {
-      this.$router.push({
-        name: pageName
-      });
-    }
-  }
-});
+  vuetify,
+  render: (h) => h(App),
+}).$mount("#app");

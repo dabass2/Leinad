@@ -1,13 +1,13 @@
 <template>
-  <home /> 
+  <Home />
 </template>
 
 <script>
-  import home from '../components/home'
+import Home from "../components/Home";
 
-  export default {
-    components: {
-      home
-    }
-  }
+export default {
+  components: {
+    Home,
+  },
+};
 </script>

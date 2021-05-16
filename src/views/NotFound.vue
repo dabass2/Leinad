@@ -1,13 +1,13 @@
 <template>
-  <notfound />
+  <NotFound />
 </template>
 
 <script>
-  import notfound from '../components/notfound'
+import NotFound from "../components/NotFound";
 
-  export default {
-    components: {
-      notfound
-    }
-  }
+export default {
+  components: {
+    NotFound,
+  },
+};
 </script>

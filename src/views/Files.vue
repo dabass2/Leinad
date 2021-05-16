@@ -1,13 +1,13 @@
 <template>
-  <files />
+  <Files />
 </template>
 
 <script>
-  import files from '../components/files'
+import Files from "../components/Files";
 
-  export default {
-    components: {
-      files
-    }
-  }
+export default {
+  components: {
+    Files,
+  },
+};
 </script>

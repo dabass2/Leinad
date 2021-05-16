@@ -1,13 +1,13 @@
 <template>
-  <work />
+  <Work />
 </template>
 
 <script>
-  import work from '../components/work'
+import Work from "../components/Work";
 
-  export default {
-    components: {
-      work
-    }
-  };
+export default {
+  components: {
+    Work,
+  },
+};
 </script>

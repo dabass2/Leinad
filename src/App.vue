@@ -1,28 +1,16 @@
 <template>
   <v-app>
-    <div class="row header">
-      <v-toolbar class="ps-4">
-        <v-btn
-         text
-         icon
-         @click.stop="drawer = !drawer"
-         >
-          <v-icon>fas fa-bars</v-icon>
-        </v-btn>
-        <v-toolbar-title class="text-h6">Leinad</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon>fab fa-linkedin</v-icon></v-btn>
-          <v-btn text icon href="https://github.com/dabass2"><v-icon>fab fa-github</v-icon></v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-    </div>
+    <v-app-bar dense dark app>
+      <v-btn text icon @click.stop="drawer = !drawer">
+        <v-icon>fas fa-bars</v-icon>
+      </v-btn>
+      <v-app-bar-title>Leinad</v-app-bar-title>
+      <v-spacer></v-spacer>
+      <v-btn text icon href="https://www.linkedin.com/in/daniel-bass-16204617b/"><v-icon>fab fa-linkedin</v-icon></v-btn>
+      <v-btn text icon href="https://github.com/dabass2"><v-icon>fab fa-github</v-icon></v-btn>
+    </v-app-bar>
 
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      temporary
-    >
+    <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list class="pa-1">
         <v-list-item>
           <v-list-item-avatar>
