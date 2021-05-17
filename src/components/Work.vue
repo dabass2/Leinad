@@ -99,7 +99,7 @@ export default {
           will return a random meme to be used in whatever way you want to. Full \
           documentation coming soon (probably). See my discord bot for an example\
           of the api in use.",
-          link: "http://leinad.pw:9000/rmeme",
+          link: "https://rmeme.me",
         },
         {
           img: "watchpls2.jpg",
