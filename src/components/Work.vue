@@ -81,8 +81,19 @@ export default {
           link: "anime",
         },
         {
-          img: "bot.jpg",
+          img: "moodMusic.jpg",
           color: "#A1CDA8",
+          title: "Mood Music",
+          text: "Mood Music is a song recommendation website made for CS 411 Database Systems.\
+          Select what mood (or moods) you're in and you'll get back a curated list of songs that\
+          are right for you. It also has a playlist making ability and you can get a spotify link\
+          for the song directly from the website. The frontend is made in Vue/Vuetify\
+          (like all things here) and the backend is a MySql database.",
+          link: "moodmusic",
+        },
+        {
+          img: "bot.jpg",
+          color: "#B5DFCA",
           title: "Discord Bot",
           text: "A discord bot I made called 'tfw'. Originally\
           it was meant to send a random 'The Feeling (or face) When' image, but\
@@ -93,7 +104,7 @@ export default {
         },
         {
           img: "rmeme.jpg",
-          color: "#B5DFCA",
+          color: "#627264",
           title: "Random Meme Api",
           text: "Random Meme (rmeme) is an API that \
           will return a random meme to be used in whatever way you want to. Full \
@@ -103,7 +114,7 @@ export default {
         },
         {
           img: "watchpls2.jpg",
-          color: "#627264",
+          color: "#AD9BAA",
           title: "WatchPls",
           text: "WatchPls\
           was the result of rabb.it shutting down. Add the chrome or edge extension to\
@@ -114,7 +125,7 @@ export default {
         },
         {
           img: "sort.jpg",
-          color: "#AD9BAA",
+          color: "#C5E7E2",
           title: "Assorted Work",
           text: "This is where anything\
           I've done that doesn't fit anywhere else goes. It's primarily random\
