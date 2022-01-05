@@ -71,6 +71,16 @@ export default {
     return {
       timeline: [
         {
+          img: "solar.jpg",
+          color: "#AD9BAA",
+          title: "Solar System",
+          text: "This is a simulation of the solar system I made for my final\
+          project in CS 242. It is not completely scientifically accurate and\
+          many of the orbits, rotations, and sizes are not perfectly to scale. Data\
+          is retrieved from an api and simulation is done with p5.js.",
+          link: "solar",
+        },
+        {
           img: "aniGuess.jpg",
           color: "#C5E7E2",
           title: "Anime Guess",
