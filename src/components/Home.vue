@@ -5,7 +5,7 @@
         <v-parallax :src="require('@/assets/home/night.jpg')">
           <h1 class="display-2 font-weight-thin">Daniel Bass</h1>
           <h4 class="subheading my-1">
-            Computer Science + Astronomy | Student | UIUC
+            Software Engineer | Chicago
           </h4>
           <div class="text-xs-center">
             <v-btn text icon dark href="https://github.com/dabass2">
