@@ -1,117 +1,79 @@
 <template>
-  <div>
-    <v-row>
-      <v-col align="center">
-        <v-parallax :src="require('@/assets/home/night.jpg')">
-          <h1 class="display-2 font-weight-thin">Daniel Bass</h1>
-          <h4 class="subheading my-1">
-            Software Engineer | Chicago
-          </h4>
-          <div class="text-xs-center">
-            <v-btn text icon dark href="https://github.com/dabass2">
-              <v-icon>fab fa-github</v-icon>
-            </v-btn>
-            <v-btn text icon dark href="https://www.linkedin.com/in/daniel-bass-16204617b/">
-              <v-icon>fab fa-linkedin</v-icon>
-            </v-btn>
-          </div>
-        </v-parallax>
-      </v-col>
-    </v-row>
+  <v-container class="fill-height" background-color="primary">
+    <v-responsive class="d-flex align-center text-center fill-height">
+      <v-img
+        contain
+        height="300"
+        src="src/assets/logo.svg"
+      />
 
-    <v-row no-gutters justify="center" class="hidden-md-and-down">
-      <v-col v-for="(card, i) in cards" :key="i" cols="5">
-        <v-card class="ma-4">
-          <a :href="`/${card.link}`"
-            ><v-img
-              :src="require(`@/assets/home/${card.img}`)"
-              aspect-ratio="2.75"
-            ></v-img
-          ></a>
-          <v-card-title class="text-h5">{{card.title}}</v-card-title>
-          <v-card-text>{{card.text}}</v-card-text>
-          <v-card-actions>
-            <v-btn dark :color="card.color" :to="`/${card.link}`">Visit</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+      <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
-    <v-row no-gutters justify="center" class="hidden-lg-and-up">
-      <v-col v-for="(card, i) in cards" :key="i" cols="12">
-        <v-card class="ma-4">
-          <a :href="`/${card.link}`"
-            ><v-img
-              :src="require(`@/assets/home/${card.img}`)"
-              aspect-ratio="2.75"
-            ></v-img
-          ></a>
-          <v-card-title class="text-h5">{{card.title}}</v-card-title>
-          <v-card-text>{{card.text}}</v-card-text>
-          <v-card-actions>
-            <v-btn dark :color="card.color" :to="`/${card.link}`">Visit</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
-  </div>
+      <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+
+      <div class="py-14" />
+
+      <v-row class="d-flex align-center justify-center">
+        <v-col cols="auto">
+          <v-btn
+            href="https://next.vuetifyjs.com/components/all/"
+            min-width="164"
+            rel="noopener noreferrer"
+            target="_blank"
+            variant="text"
+          >
+            <v-icon
+              icon="mdi-view-dashboard"
+              size="large"
+              start
+            />
+
+            Components
+          </v-btn>
+        </v-col>
+
+        <v-col cols="auto">
+          <v-btn
+            color="primary"
+            href="https://next.vuetifyjs.com/introduction/why-vuetify/#feature-guides"
+            min-width="228"
+            rel="noopener noreferrer"
+            size="x-large"
+            target="_blank"
+            variant="flat"
+          >
+            <v-icon
+              icon="mdi-speedometer"
+              size="large"
+              start
+            />
+
+            Get Started
+          </v-btn>
+        </v-col>
+
+        <v-col cols="auto">
+          <v-btn
+            href="https://community.vuetifyjs.com/"
+            min-width="164"
+            rel="noopener noreferrer"
+            target="_blank"
+            variant="text"
+          >
+            <v-icon
+              icon="mdi-account-group"
+              size="large"
+              start
+            />
+
+            Community
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-responsive>
+  </v-container>
 </template>
 
-<script>
-export default {
-  name: "Home",
-  data() {
-    return {
-      cards: [
-        {
-          img: "code.jpg",
-          text: "A collection of things that I have done\
-          and/or worked on. Still working on a lot of things (when I get time).\
-          and hope to add to the list.",
-          title: "Work",
-          color: "black",
-          link: "work",
-        },
-        {
-          img: "git.jpg",
-          text: "A nice and quick link to the files on my server.\
-          Nothing ground breaking, but maybe something interesting will catch your\
-          eye.",
-          title: "Files",
-          color: "black",
-          link: "files",
-        },
-      ],
-    };
-  },
-};
-</script>
+<script lang="ts">
 
-<style>
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cards {
-  padding: 15px;
-}
-.bodyContent {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.bodyText {
-  width: 75vw;
-  text-align: center;
-}
-#copyright {
-  padding: 10px;
-}
-.subheading {
-  text-align: center;
-}
-.src {
-  height: 100vh;
-}
-</style>
+</script>
