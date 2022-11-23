@@ -1,40 +1,27 @@
 <template>
-  <v-app>
+  <v-app id="main">
     <v-main>
-      <v-btn
-        :icon=btnIcon
-        @click="toggleTheme"
-        size="small"
-      >
-      </v-btn>
+      <TopBar />
       <Home />
+      <Work id="projects" />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Home from '@/components/Home.vue';
-import { useTheme } from 'vuetify/lib/framework.mjs';
-import { ref } from 'vue';
+import Work from '@/components/Work.vue';
+import TopBar from '@/components/TopBar.vue';
 
 export default {
-  setup() {
-    const theme = useTheme()
-    const btnIcon = ref(theme.global.current.value.dark ? 'mdi-white-balance-sunny' : 'mdi-brightness-2')
-
-    return {
-      theme,
-      btnIcon,
-    }
-  },
-  methods: {
-    toggleTheme() {
-      this.theme.global.name.value = this.theme.global.current.value.dark ? 'light' : 'dark'
-      this.btnIcon = this.theme.global.current.value.dark ? 'mdi-white-balance-sunny' : 'mdi-brightness-2'
-    }
-  },
   components: {
-    Home
+    Home, Work, TopBar
   }
 }
 </script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
