@@ -1,24 +1,13 @@
 <template>
-  <v-container>
+  <v-container class="py-0">
     <v-app-bar elevation="0" :color=theme.current.value.colors.background border>
       <template v-slot:prepend>
         <v-btn icon="mdi-home-circle-outline" href="#main" />
       </template>
       <template v-slot:append>
-        <v-btn
-          icon="mdi-github"
-          href="https://github.com/dabass2"
-          target="_blank"
-        ></v-btn>
-        <v-btn
-          icon="mdi-linkedin"
-          href="https://www.linkedin.com/in/daniel-bass-16204617b/"
-          target="_blank"
-        ></v-btn>
-        <v-btn
-          :icon=btnIcon
-          @click="toggleTheme"
-        ></v-btn>
+        <v-btn icon="mdi-github" href="https://github.com/dabass2" target="_blank"></v-btn>
+        <v-btn icon="mdi-linkedin" href="https://www.linkedin.com/in/daniel-bass-16204617b/" target="_blank"></v-btn>
+        <v-btn :icon=btnIcon @click="toggleTheme"></v-btn>
       </template>
     </v-app-bar>
   </v-container>
