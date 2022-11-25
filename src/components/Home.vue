@@ -15,7 +15,7 @@
           </v-btn>
         </v-col>
         <v-col cols="auto">
-          <v-btn color="secondary" variant="text" border>
+          <v-btn href="#files" color="secondary" variant="text" border>
             <v-icon icon="mdi-folder" size="large" start />
             Files
           </v-btn>
