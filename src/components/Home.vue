@@ -9,13 +9,13 @@
       </v-row>
       <v-row justify="center">
         <v-col cols="auto">
-          <v-btn href="#projects" color="primary" variant="flat">
+          <v-btn @click="goTo('projects')" color="primary" variant="flat">
             <v-icon icon="mdi-view-dashboard" size="large" start />
             Projects
           </v-btn>
         </v-col>
         <v-col cols="auto">
-          <v-btn href="#files" color="secondary" variant="text" border>
+          <v-btn @click="goTo('files')" color="secondary" variant="text" border>
             <v-icon icon="mdi-folder" size="large" start />
             Files
           </v-btn>
@@ -26,15 +26,17 @@
   </v-container>
 </template>
 
-<script lang="ts">
-export default {
-  setup() {
-    const names: Array<String> = ['Daniel', 'Leinad', 'Daniel Bass', 'My Name Jeff', 'Cruz Onby']
-    const getName = () => names[Math.floor(Math.random() * names.length)]
+<script setup lang="ts">
+import { ref } from 'vue';
 
-    return {
-      getName
-    }
-  }
+const names = ref<Array<string>>(['Daniel', 'Leinad', 'Daniel Bass', 'My Name Jeff', 'Cruz Onby']);
+
+function getName(): string {
+  return names.value[Math.floor(Math.random() * names.value.length)];
+}
+
+// $vuetify.goTo removed in v3?
+function goTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({behavior: 'smooth'})
 }
 </script>

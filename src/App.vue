@@ -14,21 +14,13 @@
   </v-app>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import Home from '@/components/Home.vue';
 import Work from '@/components/Work.vue';
 import TopBar from '@/components/TopBar.vue';
 import Files from '@/components/Files.vue';
-
-export default {
-  components: {
-    Home, Work, TopBar, Files
-  }
-}
 </script>
 
 <style>
-html {
-  scroll-behavior: smooth;
-}
+
 </style>
