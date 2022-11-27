@@ -4,7 +4,6 @@
     "target": "esnext",
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
-    "composite": true,
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
@@ -12,10 +11,18 @@
     "sourceMap": false,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "types": ["vuetify"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "vuetify"
+    ],
     "paths": {
-      "@/*": ["src/*", "./*"]
+      "@/*": [
+        "src/*",
+        "./*"
+      ]
     },
   },
   "include": [

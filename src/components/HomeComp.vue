@@ -15,9 +15,9 @@
           </v-btn>
         </v-col>
         <v-col cols="auto">
-          <v-btn @click="goTo('files')" color="secondary" variant="text" border>
-            <v-icon icon="mdi-folder" size="large" start />
-            Files
+          <v-btn @click="goTo('assort')" color="secondary" variant="text" border>
+            <v-icon icon="mdi-folder-open" size="large" start />
+            Assorted
           </v-btn>
         </v-col>
       </v-row>
@@ -37,6 +37,6 @@ function getName(): string {
 
 // $vuetify.goTo removed in v3?
 function goTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({behavior: 'smooth'})
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>

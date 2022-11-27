@@ -2,96 +2,27 @@
   <v-container>
     <v-responsive class="d-flex pt-15">
       <div class="font-weight-thin text-h3 text-center">Projects</div>
-      <div class="font-weight-light subtitle-2 text-center pt-2">Links to Projects & More Info</div>
+      <div class="font-weight-light subtitle-2 text-center pt-2">Links to Projects &amp; More Info</div>
       <v-divider class="mt-4" />
       <v-row v-for="(item, i) in projects" :key=i align="center" dense>
         <v-col cols="4" justify="center">
-          <v-img
-            :src=item.img_link
-            contain
-            max-height="300"
-            max-width="350"
-          ></v-img>
+          <v-img :src=item.img_link contain max-height="300" max-width="350"></v-img>
         </v-col>
-        <v-col justify="center" cols="auto">
-          <v-card
-            flat
-            color="transparent"
-            class="my-5 text-left"
-            max-width="60vw"
-          >
-            <v-card-title class="headline font-weight-light">{{ item.title }}</v-card-title>
-            <v-divider></v-divider>
-            <v-card-text class="white text--primary">{{ item.desc }}</v-card-text>
-            <v-chip
-              v-for="(tech, i) in item.techs"
-              :key="i"
-              class="ml-4"
-              :color="chips[tech.toLowerCase()].color"
-              :prepend-icon="chips[tech.toLowerCase()].icon"
-            >
-              {{ tech }}
-            </v-chip>
-            <v-card-actions>
-              <v-spacer />
-              <v-btn
-                v-if="item.code_link"
-                icon="mdi-xml"
-                color="secondary"
-                :href="item.code_link"
-                target="_blank"
-              >
-              </v-btn>
-              <v-btn
-                :icon="item.ext_link ? 'mdi-web' : 'mdi-chevron-right'"
-                color="primary"
-                :href="item.ext_link"
-                @click="!item.ext_link ? dialog = true : ''"
-                target="_blank"
-              />
-            </v-card-actions>
-          </v-card>
+        <v-col cols="8" justify="center">
+          <InfoComp :proj="item" />
         </v-col>
         <v-divider />
       </v-row>
-      <v-dialog v-model="dialog">hello</v-dialog>
+      <v-divider />
     </v-responsive>
   </v-container>
 </template>
 
 <script setup lang="ts">
+import InfoComp from '@/components/InfoComp.vue';
 import { ref } from 'vue';
 
-interface ChipInfo {
-  color: string,
-  icon: string
-}
-
-interface Chip {
-  javascript: ChipInfo,
-  nodejs: ChipInfo,
-  mongodb: ChipInfo,
-  mysql: ChipInfo,
-  expressjs: ChipInfo,
-  p5js: ChipInfo,
-  apis: ChipInfo,
-  vue: ChipInfo,
-  vuetify: ChipInfo
-}
-
-const chips = ref<Chip>({
-  javascript: {color: 'amber', icon: 'mdi-language-javascript'},
-  nodejs: {color: 'light-green', icon: 'mdi-nodejs'},
-  mongodb: {color: 'green', icon: 'mdi-leaf'},
-  mysql: {color: 'gray', icon: 'mdi-database'},
-  expressjs: {color: 'blue-grey', icon: 'mdi-language-javascript'},
-  p5js: {color: 'pink', icon: 'mdi-language-javascript'},
-  apis: {color: 'cyan', icon: 'mdi-api'},
-  vue: {color: 'green', icon: 'mdi-vuejs'},
-  vuetify: {color: 'light-blue', icon: 'mdi-vuetify'}
-});
-
-interface Project {
+export interface Project {
   title: string,
   desc: string,
   ext_color: string,
@@ -102,7 +33,6 @@ interface Project {
   techs?: Array<string>
 }
 
-const dialog = ref<boolean>(false);
 const projects = ref<Array<Project>>(
   [
     {
@@ -174,7 +104,7 @@ const projects = ref<Array<Project>>(
       img_link: "/src/assets/home/anime2_temp.jpg",
       ext_link: "https://leinad.dev/anime",
       code_link: "https://github.com/dabass2/anime-guess",
-      techs: ["Vue", "Vuetify", "APIs"]
+      techs: ["Vue", "Vuetify", "Javascript", "APIs"]
     },
     {
       title: "Assorted Projects",
