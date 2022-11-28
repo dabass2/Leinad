@@ -47,7 +47,7 @@ const projects = ref<Array<Project>>(
               REST api calls and basic API key authorization.",
       ext_color: "#44BBA4",
       info_color: "green",
-      img_link: "/src/assets/home/rmeme2_temp.jpg",
+      img_link: "home/rmeme.jpg",
       ext_link: "https://rmeme.me",
       techs: ["NodeJS", "ExpressJS", "MongoDB"]
     },
@@ -60,7 +60,7 @@ const projects = ref<Array<Project>>(
               orbits, filter which planets/objects are shown, changing the simulation speed, and a few others.",
       ext_color: "#44BBA4",
       info_color: "green",
-      img_link: "/src/assets/home/solar2_temp.jpg",
+      img_link: "home/solar.jpg",
       ext_link: "https://leinad.dev/solar",
       code_link: "https://github.com/dabass2/p5-solar-system",
       techs: ["Javascript", "Vue", "Vuetify", "p5js", "APIs"]
@@ -74,8 +74,8 @@ const projects = ref<Array<Project>>(
               of my cat or dog.",
       ext_color: "#44BBA4",
       info_color: "green",
-      img_link: "/src/assets/home/tfw2_temp.jpg",
-      ext_link: "https://github.com/dabass2/Github-Bot",
+      img_link: "home/tfw.jpg",
+      ext_link: "https://github.com/dabass2/Discord-Bot",
       code_link: "https://github.com/dabass2/Discord-Bot",
       techs: ["NodeJS", "APIs"]
     },
@@ -89,7 +89,7 @@ const projects = ref<Array<Project>>(
               The frontend is written using Vuetify and the data is stored in a self-hosted MySQL DB.",
       ext_color: "#44BBA4",
       info_color: "green",
-      img_link: "/src/assets/home/mood2_temp.jpg",
+      img_link: "home/mood.jpg",
       ext_link: "https://leinad.dev/moodmusic",
       code_link: "https://github.com/dabass2/Mood-Music",
       techs: ["Vue", "Vuetify", "Javascript", "MySQL"]
@@ -104,7 +104,7 @@ const projects = ref<Array<Project>>(
              by the AniList GraphQL API and an outdated and possibly broken JikanJS MAL API.",
       ext_color: "#44BBA4",
       info_color: "green",
-      img_link: "/src/assets/home/anime2_temp.jpg",
+      img_link: "home/anime.jpg",
       ext_link: "https://leinad.dev/anime",
       code_link: "https://github.com/dabass2/anime-guess",
       techs: ["Vue", "Vuetify", "Javascript", "APIs"]
