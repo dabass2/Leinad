@@ -1,44 +1,5 @@
-# default
+# Leinad
 
-## Project setup
+A nice portfolio website to store stuff all about me
 
-```
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-# yarn
-yarn dev
-
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-```
-
-### Compiles and minifies for production
-
-```
-# yarn
-yarn build
-
-# npm
-npm run build
-
-# pnpm
-pnpm build
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
+Made using Vue with the Vuetify component library

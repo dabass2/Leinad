@@ -1,9 +1,9 @@
 <template>
-  <v-card flat color="transparent" class="my-5 text-left" max-width="60vw">
+  <v-card flat color="transparent" class="my-5 text-left">
     <v-card-title class="headline font-weight-light">{{ props.proj.title }}</v-card-title>
     <v-divider></v-divider>
     <v-card-text class="white text--primary">{{ props.proj.desc }}</v-card-text>
-    <v-chip v-for="(tech, i) in props.proj.techs" :key="i" class="ml-4"
+    <v-chip v-for="(tech, i) in props.proj.techs" :key="i" class="ma-1"
       :color="chips[tech.toLowerCase() as keyof Chip].color"
       :prepend-icon="chips[tech.toLowerCase() as keyof Chip].icon">
       {{ tech }}

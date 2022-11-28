@@ -1,26 +1,35 @@
 <template>
-  <v-container class="py-15">
+  <v-container>
     <v-responsive>
-      <div class="text-center text-h3 font-weight-thin">Assorted Projects &amp; Stuff</div>
-      <div class="font-weight-light subtitle-2 text-center pt-2">Not all of the small random things I make can be
-        displayed in their own section nor do I really want to. So I've put them inside of here with their own
-        mini-descriptions and links.</div>
-      <v-divider class="py-4" />
-      <v-expansion-panels>
-        <v-expansion-panel v-for="(item, i) in subProjs" :key="i" :title="item.title">
-          <v-expansion-panel-text>
-            <div>{{ item.desc }}</div>
-            <v-card-actions>
-              <v-chip v-for="(tech, i) in item.techs" :key="i" :color="chips[tech.toLowerCase() as keyof Chip].color"
-                :prepend-icon="chips[tech.toLowerCase() as keyof Chip].icon">{{ tech }}</v-chip>
-              <v-spacer />
-              <v-btn v-if="item.code_link" icon="mdi-xml" color="secondary" :href="item.code_link" target="_blank">
-              </v-btn>
-              <v-btn v-if="item.ext_link" icon="mdi-web" color="primary" :href="item.ext_link" target="_blank"></v-btn>
-            </v-card-actions>
-          </v-expansion-panel-text>
-        </v-expansion-panel>
-      </v-expansion-panels>
+      <v-row justify="center">
+        <v-col :cols="mdAndUp ? '8' : '12'">
+          <div class="text-center text-h3 font-weight-thin">Assorted Projects &amp; Stuff</div>
+          <div class="font-weight-light subtitle-2 text-center pt-2">Not all of the small random things I make can be
+            displayed in their own section nor do I really want to. So I've put them inside of here with their own
+            mini-descriptions and links.</div>
+          <v-divider class="py-4" />
+          <v-expansion-panels>
+            <v-expansion-panel v-for="(item, i) in subProjs" :key="i" :title="item.title">
+              <v-expansion-panel-text class="text-left">
+                <div>
+                  {{ item.desc }}
+                </div>
+                <v-chip v-for="(tech, i) in item.techs" :key="i" :color="chips[tech.toLowerCase() as keyof Chip].color"
+                  :prepend-icon="chips[tech.toLowerCase() as keyof Chip].icon" class="ma-1">
+                  {{ tech }}
+                </v-chip>
+                <v-card-actions>
+                  <v-spacer />
+                  <v-btn v-if="item.code_link" icon="mdi-xml" color="secondary" :href="item.code_link" target="_blank">
+                  </v-btn>
+                  <v-btn v-if="item.ext_link" icon="mdi-web" color="primary" :href="item.ext_link" target="_blank">
+                  </v-btn>
+                </v-card-actions>
+              </v-expansion-panel-text>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-col>
+      </v-row>
     </v-responsive>
   </v-container>
 </template>
@@ -29,6 +38,9 @@
 import { ref } from 'vue';
 import { Project } from './WorkComp.vue';
 import { Chip } from './InfoComp.vue';
+import { useDisplay } from 'vuetify';
+
+const { mdAndUp } = useDisplay();
 
 const chips = ref<Chip>({
   javascript: { color: 'amber', icon: 'mdi-language-javascript' },

@@ -5,10 +5,10 @@
       <div class="font-weight-light subtitle-2 text-center pt-2">Links to Projects &amp; More Info</div>
       <v-divider class="mt-4" />
       <v-row v-for="(item, i) in projects" :key=i align="center" dense>
-        <v-col cols="4" justify="center">
-          <v-img :src=item.img_link contain max-height="300" max-width="350"></v-img>
+        <v-col :cols="mdAndUp ? '4' : '12'" justify="center" align="center">
+          <v-img :src=item.img_link contain max-height="300" max-width="350" />
         </v-col>
-        <v-col cols="8" justify="center">
+        <v-col :cols="mdAndUp ? '8' : '12'" justify="center" align="center">
           <InfoComp :proj="item" />
         </v-col>
         <v-divider />
@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import InfoComp from '@/components/InfoComp.vue';
 import { ref } from 'vue';
+import { useDisplay } from 'vuetify';
 
 export interface Project {
   title: string,
@@ -32,6 +33,8 @@ export interface Project {
   code_link?: string,
   techs?: Array<string>
 }
+
+const { mdAndUp } = useDisplay();
 
 const projects = ref<Array<Project>>(
   [
@@ -105,16 +108,6 @@ const projects = ref<Array<Project>>(
       ext_link: "https://leinad.dev/anime",
       code_link: "https://github.com/dabass2/anime-guess",
       techs: ["Vue", "Vuetify", "Javascript", "APIs"]
-    },
-    {
-      title: "Assorted Projects",
-      desc: "Not all of the small random things I make can be displayed in their own section\
-              nor do I really want to. So I've put them inside of here with their own mini-descriptions\
-              and links.",
-      ext_color: "#44BBA4",
-      info_color: "green",
-      img_link: "src/assets/home/assort3_temp.jpg",
-      techs: []
     }
   ]
 )

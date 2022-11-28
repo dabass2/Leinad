@@ -5,6 +5,7 @@
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
