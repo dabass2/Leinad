@@ -1,3 +1,5 @@
-A nice portfolio website to store stuff all about me.
+# Leinad
 
-Made using Vue with the Vuetify plugin.
+A nice portfolio website to store stuff all about me
+
+Made using Vue with the Vuetify component library
