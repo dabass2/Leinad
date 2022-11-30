@@ -94,6 +94,15 @@ const subProjs = ref<Array<Project>>(
       techs: ['Javascript', 'Vue', 'Vuetify']
     },
     {
+      title: 'Bag Alert API',
+      desc: 'Sometimes...you just gotta know when there\'s a major bag alert.',
+      ext_color: 'primary',
+      info_color: 'secondary',
+      ext_link: 'https://alert.leinad.pw',
+      code_link: 'https://github.com/dabass2/bag-alert-api',
+      techs: ['Javascript', 'NodeJS']
+    },
+    {
       title: 'Vizu',
       desc: 'I like making visualizations for things. Only thing is, I am lazy so I haven\'t made many.',
       ext_color: 'primary',
