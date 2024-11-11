@@ -1,7 +1,7 @@
 name: deploy-leinad-fe
 on:
   push:
-    branches: main
+    branches: ["master", "main"]
 
 permissions:
   packages: write
